@@ -30,7 +30,9 @@ export default class Task extends Component {
         <button className="delete" onClick={this.deleteThisTask.bind(this)}>&times;</button>
         {/* Checkbox is wrapped in a label, so if the text is clicked it triggers the button */}
         <label className="control control--checkbox">
-          <strong>{this.props.task.username}</strong>: {this.props.task.text}
+          <span className="text">
+            <strong>{this.props.task.username}</strong>: {this.props.task.text}
+          </span>
           <input
             type="checkbox"
             readOnly
